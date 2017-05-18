@@ -16,6 +16,9 @@ body {
 
 #jellyfish {
   position: relative;
+  height: 250px;
+  width: auto;
+
 }
 
 h1 {

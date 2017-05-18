@@ -8,48 +8,25 @@ let $turtle = $('#turtle');
 $(document).keypress(function(e){
     if (e.key === "t") {
       $turtle.animate({
-        left: '+=25px'
+        left: '+=50px'
       });
     } else if (e.key === "j") {
         $jellyfish.animate({
-          left: '+=50px'
+          left: '+=25px'
         });
     }
-})
+  })
+  let positionOne = $($jellyfish).position();
+  let positionTwo = $($turtle).position();
 
-let positionOne = $($jellyfish).position();
-let positionTwo = $($turtle).position();
 
+    if ((positionOne.left + $($jellyfish).width()) >= $(document).width()) {
 
-  // if ((positionOne.left + $($jellyfish).width()) >= $(document).width()) {
+      $('h1').text('Jellyfish Wins!!!');
+    }
 
-  //   $('h1').text('Jellyfish Wins!!!');
-
-if ((positionTwo.left + $($turtle).width()) >= $(document).width()) {
-  $('h1').text('Turtle Wins!!!');
-
+  if ((positionTwo.left + $($turtle).width()) >= $(document).width()) {
+    $('h1').text('Turtle Wins!!!');
 }
 
-// }
-//
-// })
-// var positionOne = $($homerSimpson).position();
-//           var positionTwo = $($peterGriffin).position();
-//           if (positionOne.left + $($homerSimpson).width() >= trackWidth) {
-//               $(document).off('keydown');
-//               $('#container').append('<img id="dinner" src="imgs/winnerwinnerchickendinner.png"></img>');
-//               $('h1').text('Homer Simpson Wins!!!!');
-//               var audio = new Audio('media/burp.wav');
-//               audio.play();
-//               $('#reset').addClass('animated infinite pulse');
-//               return;
-//           }
-//           if (positionTwo.left + $($peterGriffin).width() >= trackWidth) {
-//               $(document).off('keydown');
-//               $('#container').append('<img id="dinner" src="imgs/winnerwinnerchickendinner.png"></img>');
-//               $('h1').text('Peter Griffin Wins!!!!');
-//               var audio = new Audio('media/laugh.mp3');
-//               audio.play();
-//               $('#reset').addClass('animated infinite pulse');
-//               return;
-//           }
+})
