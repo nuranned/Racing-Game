@@ -1,4 +1,24 @@
-h1 {
-  background-color: blue;
+body {
+  background-image: url(http://i.imgur.com/4VgLm9E.jpg);
 
+}
+
+.race {
+  position: relative;
+    max-width: 400px;
+}
+
+#turtle {
+  position: relative;
+
+
+}
+
+#jellyfish {
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  color: white;
 }
